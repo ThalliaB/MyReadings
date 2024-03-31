@@ -1,33 +1,1 @@
-﻿@model IEnumerable<MyReadingsModel>
-
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Book</th>
-            <th scope="col">Writer</th>
-            <th scope="col">Pages</th>
-            <th scope="col">Start</th>
-            <th scope="col">End</th>
-            <th scope="col">Obs</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        @if(Model != null)
-        {
-            
-            @foreach(var readings in Model)
-            {
-                <tr>
-                    <th scope="row">@readings.Title</th>
-                    <td>@readings.Writer</td>
-                    <td>@readings.Pages</td>
-                    <td>@readings.Start</td>
-                    <td>@readings.End</td>
-                    <td>@readings.Obs</td>
-                </tr>
-            }
-
-        }
-    </tbody>
-</table>
+﻿@model IEnumerable<MyReadingsModel><div class="container">    <div class="d-flex justify-content-between align-items-center mb-5">        <h1>My Readings</h1>        <a class="btn btn-success mx-2" asp-controller="MyReadings" asp-action="AddNewReading">Add new reading</a>    </div>    <table class="table table-hover">        <thead>            <tr>                <th scope="col">Book</th>                <th scope="col">Writer</th>                <th scope="col">Pages</th>                <th scope="col">Start</th>                <th scope="col">End</th>                @* <th scope="col">Obs</th> *@            </tr>        </thead>        <tbody>            @if(Model != null)            {                            @foreach(var readings in Model)                {                    <tr>                        <th scope="row">@readings.Title</th>                        <td>@readings.Writer</td>                        <td>@readings.Pages</td>                        <td>@readings.Start</td>                        <td>@readings.End</td>                        @* <td>@readings.Obs</td> *@                    </tr>                }            }        </tbody>    </table></div>

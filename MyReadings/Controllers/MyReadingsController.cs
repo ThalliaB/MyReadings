@@ -19,5 +19,12 @@ namespace MyReadings.Controllers
             IEnumerable<MyReadingsModel> myReadings = _db.MyReadings;
             return View(myReadings);
         }
+
+        public IActionResult AddNewReading()
+        {
+            return View();
+        }
+
+        //public IActionResult OpenViewReading() { }
     }
 }
