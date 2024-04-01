@@ -1,6 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model MyReadingsModel
 @{
     ViewData["title"] = "Add new Reading";
 }
@@ -11,30 +9,30 @@
         <h1 class="text-light">Add new Reading</h1>
     </div>
 
-    <form>
+    <form method="post" asp-controller="MyReadings" asp-action="AddNewReading">
         <div class="mb-3">
             <label for="Title" class="form-label text-light">Book title</label>
-            <input type="text" class="form-control" id="Title" placeholder="Write the name of the book">
+            <input type="text" asp-for="Title" class="form-control" id="Title" placeholder="Write the name of the book">
         </div>
         <div class="mb-3">
             <label for="Writer" class="form-label text-light">Writer</label>
-            <input type="text" class="form-control" id="Writer" placeholder="Write the writer of the book">
+            <input type="text" asp-for="Writer" class="form-control" id="Writer" placeholder="Write the writer of the book">
         </div>
         <div class="mb-3">
             <label for="Pages" class="form-label text-light">Pages</label>
-            <input type="number" class="form-control" id="Pages" placeholder="Write the number of the pages">
+            <input type="number" asp-for="Pages" class="form-control" id="Pages" placeholder="Write the number of the pages">
         </div> 
         <div class="mb-3">
             <label for="Start" class="form-label text-light">Start</label>
-            <input type="datetime" class="form-control" id="Start" placeholder="Write the day started to read the book">
+            <input type="datetime" asp-for="Start" class="form-control" id="Start" placeholder="Write the day started to read the book">
         </div>
         <div class="mb-3">
             <label for="End" class="form-label text-light">End</label>
-            <input type="datetime" class="form-control" id="End" placeholder="Write the day ended to read the book">
+            <input type="datetime" asp-for="End" class="form-control" id="End" placeholder="Write the day ended to read the book">
         </div>
         <div class="mb-3">
             <label for="Obs" class="form-label text-light">Obs</label>
-            <input type="text" class="form-control" id="Obs" placeholder="Write the Obs">
+            <input type="text" asp-for="Obs" class="form-control" id="Obs" placeholder="Write the Obs">
         </div>
 
         <div class="d-flex gap-5 mt-5">

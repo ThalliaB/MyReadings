@@ -25,6 +25,19 @@ namespace MyReadings.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult AddNewReading(MyReadingsModel myreadings)
+        {
+            if(ModelState.IsValid)
+            {
+                _db.MyReadings.Add(myreadings);
+                _db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
+
         //public IActionResult OpenViewReading() { }
     }
 }
