@@ -16,3 +16,8 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.semmargin {
+    padding: 3px;
+    margin: 0 2px 0 0;
+}

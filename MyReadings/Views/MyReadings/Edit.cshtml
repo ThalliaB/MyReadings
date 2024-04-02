@@ -1,15 +1,19 @@
 ﻿@model MyReadingsModel
 @{
-    ViewData["title"] = "Add new Reading";
+    ViewData["title"] = "Edit Reading";
 }
 
 <div class="container bg-dark p-5 rounded-5">
 
     <div class="mb-5 text-center">
-        <h1 class="text-light">Add new Reading</h1>
+        <h1 class="text-light">Edit Reading</h1>
     </div>
 
-    <form method="post" asp-controller="MyReadings" asp-action="AddNewReading">
+    <form method="post" asp-controller="MyReadings" asp-action="Edit">
+
+        @* pega o Id *@
+        <input type="hidden" asp-for="Id"/>
+
         <div class="mb-3">
             <label for="Title" class="form-label text-light">Book title</label>
             <input type="text" asp-for="Title" class="form-control" id="Title" placeholder="Write the name of the book">
@@ -24,15 +28,15 @@
             <label for="Pages" class="form-label text-light">Pages</label>
             <input type="number" asp-for="Pages" class="form-control" id="Pages" placeholder="Write the number of the pages">
             <span class="text-danger" asp-validation-for="Pages"></span>
-        </div> 
+        </div>
         <div class="mb-3">
             <label for="Start" class="form-label text-light">Start</label>
-            <input type="date" asp-for="Start" class="form-control" id="Start" placeholder="Write the day started to read the book">
+            <input type="datetime" asp-for="Start" class="form-control" id="Start" placeholder="Write the day started to read the book">
             <span class="text-danger" asp-validation-for="Start"></span>
         </div>
         <div class="mb-3">
             <label for="End" class="form-label text-light">End</label>
-            <input type="date" asp-for="End" class="form-control" id="End" placeholder="Write the day ended to read the book">
+            <input type="datetime" asp-for="End" class="form-control" id="End" placeholder="Write the day ended to read the book">
             <span class="text-danger" asp-validation-for="End"></span>
         </div>
         <div class="mb-3">

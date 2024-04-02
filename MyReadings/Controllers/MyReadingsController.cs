@@ -38,6 +38,55 @@ namespace MyReadings.Controllers
             return View();
         }
 
-        //public IActionResult OpenViewReading() { }
+        public IActionResult Edit(int? id)
+        {
+
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            MyReadingsModel readings = _db.MyReadings.FirstOrDefault(x => x.Id == id);
+
+            if(readings == null)
+            {
+                return NotFound();
+            }
+
+            return View(readings);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(MyReadingsModel reading)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.MyReadings.Update(reading);
+                _db.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            return View(reading);
+        }
+
+        public IActionResult OpenViewReading(int? id)
+        {
+
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            MyReadingsModel readings = _db.MyReadings.FirstOrDefault(x => x.Id == id);
+
+            if (readings == null)
+            {
+                return NotFound();
+            }
+
+            return View(readings);
+        }
+      
     }
 }
