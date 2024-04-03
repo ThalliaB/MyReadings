@@ -38,7 +38,7 @@ $ npm install
  <img style="border-radius: 50%;" src="https://github.com/ThalliaB.png" width="100px;" alt=""/>
  <br />
  <sub><b>Thallia Brum</b></sub></a> <a href="https://github.com/ThalliaB" title="Github profile">🚀</a>
- Feito com ❤️ por Thiago Marinho 👋🏽 Entre em contato!
+ Feito com ❤️ Entre em contato!
 <br/>
 <br/>
  <a href="https://github.com/ThalliaB"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
