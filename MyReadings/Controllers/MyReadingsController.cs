@@ -87,6 +87,39 @@ namespace MyReadings.Controllers
 
             return View(readings);
         }
-      
+
+        public IActionResult Delete(int? id)
+        {
+            if(id == null || id == 0) 
+            {
+                return NotFound();
+            }
+
+            MyReadingsModel readings = _db.MyReadings.FirstOrDefault(x => x.Id == id);
+
+            if(readings == null)
+            {
+                return NotFound();
+            }
+
+            return View(readings);
+
+        }
+
+        [HttpPost]
+        public IActionResult Delete(MyReadingsModel reading)
+        {
+            if(reading == null)
+            {
+                return NotFound();
+            }
+
+            _db.MyReadings.Remove(reading);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
     }
+
 }

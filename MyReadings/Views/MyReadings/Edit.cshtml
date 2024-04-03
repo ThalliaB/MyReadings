@@ -9,45 +9,45 @@
         <h1 class="text-light">Edit Reading</h1>
     </div>
 
-    <form method="post" asp-controller="MyReadings" asp-action="Edit">
+    <form class="row" method="post" asp-controller="MyReadings" asp-action="Edit">
 
         @* pega o Id *@
         <input type="hidden" asp-for="Id"/>
 
-        <div class="mb-3">
+        <div class="mb-3 col-md-5">
             <label for="Title" class="form-label text-light">Book title</label>
             <input type="text" asp-for="Title" class="form-control" id="Title" placeholder="Write the name of the book">
             <span class="text-danger" asp-validation-for="Title"></span>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 col-md-5">
             <label for="Writer" class="form-label text-light">Writer</label>
             <input type="text" asp-for="Writer" class="form-control" id="Writer" placeholder="Write the writer of the book">
             <span class="text-danger" asp-validation-for="Writer"></span>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 col-md-2">
             <label for="Pages" class="form-label text-light">Pages</label>
-            <input type="number" asp-for="Pages" class="form-control" id="Pages" placeholder="Write the number of the pages">
+            <input type="number" asp-for="Pages" class="form-control" id="Pages" placeholder="Pages">
             <span class="text-danger" asp-validation-for="Pages"></span>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 col-md-6">
             <label for="Start" class="form-label text-light">Start</label>
             <input type="datetime" asp-for="Start" class="form-control" id="Start" placeholder="Write the day started to read the book">
             <span class="text-danger" asp-validation-for="Start"></span>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 col-md-6">
             <label for="End" class="form-label text-light">End</label>
             <input type="datetime" asp-for="End" class="form-control" id="End" placeholder="Write the day ended to read the book">
             <span class="text-danger" asp-validation-for="End"></span>
         </div>
         <div class="mb-3">
             <label for="Obs" class="form-label text-light">Obs</label>
-            <input type="text" asp-for="Obs" class="form-control" id="Obs" placeholder="Write the Obs">
+            <textarea rows="10" type="text" asp-for="Obs" class="form-control" id="Obs" placeholder="Write the Obs"></textarea>
             <span class="text-danger" asp-validation-for="Obs"></span>
         </div>
 
         <div class="d-flex gap-5 mt-5">
 
-            <button type="submit" class="btn btn-success w-50">Submit</button>
+            <button type="submit" class="btn btn-success w-50">Edit</button>
             <a class="btn btn-primary w-50" asp-controller="MyReadings" asp-action="Index">Back</a>
         </div>
 

@@ -13,43 +13,28 @@
     </div>
 
     <div class="mb-5 d-flex flex-column align-items-center">
-        <input class="border-0 h1" asp-for="Title"/>
-        <input class="border-0 fs-5" type="text" asp-for="Writer" />
+        <input class="border-0 h1 bg-white text-dark" asp-for="Title" disabled />
+        <input class="border-0 fs-5 bg-white text-dark" type="text" asp-for="Writer" disabled />
     </div>
     <div class="d-flex flex-column">
         @* <input type="text" asp-for="Title" /> *@
         <div class="d-flex">
             <label class="h5 semmargin">Páginas:</label>
-            <input class="border-0 fs-5" type="text" asp-for="Pages" />
+            <input class="border-0 fs-5 bg-white text-dark" type="text" asp-for="Pages" disabled />
         </div>
         <div class="d-flex">
             <label class="h5 semmargin">Data de Inicio da leitura:</label>
-            <input class="border-0 fs-5" type="datetime" asp-for="Start" />
+            <input class="border-0 fs-5 bg-white text-dark" type="datetime" asp-for="Start" disabled />
         </div>
         <div class="d-flex">
             <label class="h5 semmargin">Data de Finalizãção da leitura:</label>
-            <input class="border-0 fs-5" type="datetime" asp-for="End" />
+            <input class="border-0 fs-5 bg-white text-dark" type="datetime" asp-for="End" disabled />
         </div>
+        <br />
         <div>
             <label class="h5 semmargin">Observações:</label>
-            <textarea style="width:80vw;" rows="100" class="border-0 fs-5" type="text" asp-for="Obs"></textarea>
+            <textarea style="width:80vw;" rows="100" class="border-0 fs-5 bg-white text-dark" type="text" asp-for="Obs" disabled></textarea>
         </div>
     </div>
 
 </div>
-
-
-
-
-
-@* Fazer um foreach
-tem que ser igaul pega para o editar e excluir
-pega os dados e mostra aqui
-
-Nome do livro
-escritora
-paginas 
-Obs
-Data de inicio e fim no final da pagina
-
-Botom de voltar editar e excluir *@
