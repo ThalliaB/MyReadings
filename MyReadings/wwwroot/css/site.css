@@ -1,4 +1,4 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap') html {
   font-size: 14px;
 }
 
@@ -20,4 +20,10 @@ body {
 .semmargin {
     padding: 3px;
     margin: 0 2px 0 0;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
